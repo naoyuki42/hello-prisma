@@ -16,9 +16,9 @@ let UserService = class UserService {
     constructor(prisma) {
         this.prisma = prisma;
     }
-    async user(userWhreUniqueInput) {
+    async user(userWhereUniqueInput) {
         return this.prisma.user.findUnique({
-            where: userWhreUniqueInput,
+            where: userWhereUniqueInput,
         });
     }
     async users(params) {
@@ -34,6 +34,18 @@ let UserService = class UserService {
     async createUser(data) {
         return this.prisma.user.create({
             data,
+        });
+    }
+    async updateUser(params) {
+        const { where, data } = params;
+        return this.prisma.user.update({
+            data,
+            where,
+        });
+    }
+    async deleteUser(where) {
+        return this.prisma.user.delete({
+            where,
         });
     }
 };
