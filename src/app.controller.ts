@@ -37,7 +37,7 @@ export class AppController {
     });
   }
 
-  @Get('fileterd-posts/:searchString')
+  @Get('filtered-posts/:searchString')
   async getFilteredPosts(
     @Param('searchString') searchString: string,
   ): Promise<PostModel[]> {
