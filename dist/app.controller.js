@@ -91,7 +91,7 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "getPublishedPosts", null);
 __decorate([
-    (0, common_1.Get)('fileterd-posts/:searchString'),
+    (0, common_1.Get)('filter-posts/:searchString'),
     __param(0, (0, common_1.Param)('searchString')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
