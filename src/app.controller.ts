@@ -76,7 +76,7 @@ export class AppController {
     return this.userService.createUser(userData);
   }
 
-  @Put('publich/:id')
+  @Put('publish/:id')
   async publishPost(@Param('id') id: string): Promise<PostModel> {
     return this.postService.updatePost({
       where: { id: Number(id) },
