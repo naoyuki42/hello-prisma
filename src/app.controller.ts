@@ -11,7 +11,6 @@ import { AppService } from './app.service';
 import { UserService } from './user/user.service';
 import { PostService } from './post/post.service';
 import { User as UserModel, Post as PostModel } from '@prisma/client';
-import { serialize } from 'v8';
 
 @Controller()
 export class AppController {
